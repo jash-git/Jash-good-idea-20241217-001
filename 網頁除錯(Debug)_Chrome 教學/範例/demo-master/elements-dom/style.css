@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+.github {
+  display: flex;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+}
+.github img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.5s;
+}
+.github:hover img {
+  transform: scale(1.1) rotate(10deg);
+}
+h1 {
+  margin: 30px;
+  text-align: center;
+}
+section {
+  min-height: 100vh;
+  padding: 30px;
+  width: 700px;
+  max-width: 100%;
+}
+.blocks {
+  place-content: center;
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(0, 100px));
+  grid-gap: 20px;
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: monospace;
+}
+.block:nth-child(6n + 1) {
+  background: #e91e63;
+}
+.block:nth-child(6n + 2) {
+  background: #ff9800;
+}
+.block:nth-child(6n + 3) {
+  background: #ffc107;
+}
+.block:nth-child(6n + 4) {
+  background: #4caf50;
+}
+.block:nth-child(6n + 5) {
+  background: #2196f3;
+}
+.block:nth-child(6n) {
+  background: #673ab7;
+}
+
+.overlap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlap-parent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlap-child {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
